@@ -4,12 +4,13 @@
     <div class="flex flex-1">
       <Sidebar />
       <main class="flex-1 p-8">
-        <h2 class="text-2xl font-semibold">Bienvenido</h2>
+        <h2 class="text-2xl font-semibold">Correspondencias</h2>
         <p class="mt-2 text-gray-600">
-          Sistema de gestión de correspondencia
+          Gestione sus correspondencias aquí
         </p>
         <Divider/>
         <div class="flex flex-row justify-center">
+          <StatusCard />
         </div>
       </main>
     </div>
@@ -19,5 +20,6 @@
 <script setup>
 import Sidebar from '@/Components/Sidebar.vue';
 import Navbar from '@/Components/Navbar.vue';
+import StatusCard from '../Components/StatusCard.vue';
 </script>
 

@@ -13,6 +13,20 @@ export default {
         './app-modules/**/resources/**/*.vue',
         './app-modules/**/resources/**/*.js',
     ],
+    safelist: [
+        {
+            // Colores de fondo para estatus generales
+            pattern: /bg-(red|green|blue|yellow|amber|gray|indigo|purple|pink)-(100|200|300|400|500)/,
+        },
+        {
+            // Colores de texto si los necesitas en las cartas
+            pattern: /text-(red|green|blue|yellow|amber|gray|indigo|purple|pink)-(600|700|800)/,
+        },
+        {
+            // Bordes para resaltar estados
+            pattern: /border-(red|green|blue|yellow|amber|gray|indigo|purple|pink)-(200|300|400|500)/,
+        },
+    ],
 
     theme: {
         extend: {
