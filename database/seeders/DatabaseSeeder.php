@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             \Modules\Correspondencia\Database\Seeders\CategoriaSeeder::class,
+            \Modules\Correspondencia\Database\Seeders\EstatusSeeder::class,
         ]);
         
         // User::factory(10)->create();
