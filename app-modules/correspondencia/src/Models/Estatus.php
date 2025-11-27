@@ -11,4 +11,9 @@ class Estatus extends Model
     protected $fillable = [
         'nombre_estatus',
     ];
+
+    public function correspondencias()
+    {
+        return $this->hasMany(Correspondencia::class, 'estatus_id', 'id_estatus');  
+    }
 }
