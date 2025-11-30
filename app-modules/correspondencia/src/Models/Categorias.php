@@ -11,4 +11,9 @@ class Categorias extends Model
     protected $fillable = [
         'nombre_categoria',
     ];
+
+    public function correspondencias()
+    {
+        return $this->hasMany(Correspondencia::class, 'categoria_id', 'id_categoria');  
+    }
 }
