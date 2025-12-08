@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Modules\Correspondencia\Services\TiposService;
 use Modules\Correspondencia\Services\CategoriasService;
 use Modules\Correspondencia\Services\EstatusService;
+use Modules\Correspondencia\Http\Requests\TipoRequest;
+use Modules\Correspondencia\Http\Requests\CategoriaRequest;
+use Modules\Correspondencia\Http\Requests\EstatusRequest;
 
 class CrudTablasController
 {
@@ -29,16 +32,14 @@ class CrudTablasController
         return $this->tiposService->getTipoById($id);
     }
 
-    public function createTipo(Request $request)
+    public function createTipo(TipoRequest $request)
     {
-        $data = $request->all();
-        return $this->tiposService->createTipo($data);
+        return $this->tiposService->createTipo($request->validated());
     }
 
-    public function updateTipo(int $id, Request $request)
+    public function updateTipo(int $id, TipoRequest $request)
     {
-        $data = $request->all();
-        return $this->tiposService->updateTipo($id, $data);
+        return $this->tiposService->updateTipo($id, $request->validated());
     }
 
     public function deleteTipo(int $id)
@@ -58,16 +59,14 @@ class CrudTablasController
         return $this->categoriasService->getCategoriaById($id);
     }
 
-    public function createCategoria(Request $request)
+    public function createCategoria(CategoriaRequest $request)
     {
-        $data = $request->all();
-        return $this->categoriasService->createCategoria($data);
+        return $this->categoriasService->createCategoria($request->validated());
     }
 
-    public function updateCategoria(int $id, Request $request)
+    public function updateCategoria(int $id, CategoriaRequest $request)
     {
-        $data = $request->all();
-        return $this->categoriasService->updateCategoria($id, $data);
+        return $this->categoriasService->updateCategoria($id, $request->validated());
     }
 
     public function deleteCategoria(int $id)
@@ -87,16 +86,14 @@ class CrudTablasController
         return $this->estatusService->getEstatusById($id);
     }
 
-    public function createEstatus(Request $request)
+    public function createEstatus(EstatusRequest $request)
     {
-        $data = $request->all();
-        return $this->estatusService->createEstatus($data);
+        return $this->estatusService->createEstatus($request->validated());
     }
 
-    public function updateEstatus(int $id, Request $request)
+    public function updateEstatus(int $id, EstatusRequest $request)
     {
-        $data = $request->all();
-        return $this->estatusService->updateEstatus($id, $data);
+        return $this->estatusService->updateEstatus($id, $request->validated());
     }
 
     public function deleteEstatus(int $id)
