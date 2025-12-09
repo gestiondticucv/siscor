@@ -11,7 +11,6 @@ use Modules\Correspondencia\Repositories\Contracts\CategoriasRepositoryInterface
 use Modules\Correspondencia\Repositories\Contracts\EstatusRepositoryInterface;
 use Modules\Correspondencia\Repositories\Contracts\TiposRepositoryInterface;
 
-
 use Modules\Correspondencia\Repositories\Eloquent\EstatusRepository;
 use Modules\Correspondencia\Repositories\Eloquent\TiposRepository;
 use Modules\Correspondencia\Repositories\Eloquent\CategoriasRepository;

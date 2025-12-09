@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5260fde7d63acecc48cf0557d78f4a97",
+    "content-hash": "52f41c47c95cfe313d4271a725f0dfdf",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3307,6 +3307,38 @@
                     "Modules\\Correspondencia\\Tests\\": "tests/",
                     "Modules\\Correspondencia\\Database\\Factories\\": "database/factories/",
                     "Modules\\Correspondencia\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/usuarios",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/usuarios",
+                "reference": "f3f61fab2b0bd57ac1e85355b8f60fb5c5e271fe"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Usuarios\\Providers\\UsuariosServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Usuarios\\": "src/",
+                    "Modules\\Usuarios\\Tests\\": "tests/",
+                    "Modules\\Usuarios\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Usuarios\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -11341,12 +11373,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
